@@ -1,0 +1,36 @@
+extends ../layouts/layout
+
+block main
+	main(role="main")
+		div(class='table-responsive')
+			table(class='table')
+				thead(class='text-light')
+					th S/N
+					th First Name
+					th Middle Name
+					th Last Name
+					th Email
+					th Phone No
+					th Whatsapp No
+					th Hall
+					th Address
+					th Faculty
+					th Department
+					th Level
+					th LGA
+				tbody(class='text-white')
+					each member, index in members
+						tr
+							td= index + 1
+							td #{member.firstName}
+							td #{member.middleName}
+							td #{member.lastName}
+							td #{member.email}
+							td #{member.phoneNumber}
+							td #{member.whatsappNumber}
+							td #{member.hall}
+							td #{member.address}
+							td #{member.faculty}
+							td #{member.department}
+							td #{member.level}
+							td #{member.lga}

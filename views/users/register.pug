@@ -1,0 +1,52 @@
+extends ../layouts/layout
+
+block main
+	main(role="main")
+		form(method="POST" action="/register" class='row')
+			div(class="form-group col-12 col-sm-6")
+				label(for="firstName") First name
+				input(type="text" class="form-control" name="firstName" id="firstName" placeholder="First name" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="middleName") Middle name
+				input(type="text" class="form-control" id="middleName" name='middleName' placeholder="Middle name" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="lastName") Last name
+				input(type="text" class="form-control" id="lastName" name='lastName' placeholder="Last name" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="email") Email
+				input(type="text" class="form-control" id="email" name='email' placeholder="Email address" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="phoneNumber") Phone number
+				input(type="text" class="form-control" id="phoneNumber" name='phoneNumber' placeholder="Phone Number" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="whatsappNumber") Whatsapp number
+				input(type="text" class="form-control" id="whatsapp" name='whatsapp' placeholder="Whatsapp number, to be added to our whatsapp group" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="hall") Hall of residence
+				input(type="text" class="form-control" id="hall" name='hall' placeholder="hall of residence" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="address") Address on campus
+				input(type="text" class="form-control" id="address" name='address' placeholder="If you stay on campus, enter your block and room number, else indicate your off-campus address" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="faculty") Faculty
+				input(type="text" class="form-control" id="faculty" name='faculty' placeholder="your faculty" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="department") Department
+				input(type="text" class="form-control" id="department" name='department' placeholder="your department" required)
+			div(class="form-group col-12 col-sm-6")
+				label(for="level") Level
+				select(class="form-control" id="level" name='level' placeholder="" required)
+					each level in levels
+						option(value=level) #{level}
+			div(class="form-group col-12 col-sm-6")
+				label(for="lga") Local government area
+				select(class="form-control" id="lga" name='lga' required)
+					each lga in lgas
+						option(value=lga) #{lga}
+			div(class='button-div')
+				button(type="submit" class="btn btn-outline-light") Submit
+		div(class='row')
+			if error
+				p(class='text-danger') #{error}
+			if success
+				p(class='text-success') #{success}

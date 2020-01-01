@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="")
+    meta(name="author" content="Edeh Chimezie, Tidads Inc")
+    meta(name="generator" content="Jekyll v3.8.6")
+    title #{title}
+
+    <!-- Bootstrap core CSS -->
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+    link(rel='stylesheets' href='cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css')
+    link(rel="stylesheet" href="/stylesheets/style.css")
+
+  body(class="text-center")
+    div(class="container d-flex p-3 mx-auto flex-column")
+      header(class="masthead mb-auto")
+        div(class="inner")
+          h3(class="masthead-brand") FESS
+          nav(class="nav nav-masthead justify-content-center")
+            a(class="nav-link active" href="/") Home
+            a(class="nav-link" href="/register") Register
+            //- a(class="nav-link" href="/fess_members") Fess Members Admin route to view the tables
+
+      block main
+
+      footer(class="mastfoot mt-auto")
+        div(class="inner")
+          p Ebonyi! Ata ata!!!
